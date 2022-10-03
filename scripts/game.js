@@ -4,6 +4,7 @@ let board = ['','','','','','','','',''];
 let playerTime = 0;
 let symbols = ['o','x'];
 let gameOver = false;
+
 let winStates = [
     [0,1,2],
     [3,4,5],
@@ -17,6 +18,7 @@ let winStates = [
 function handleMove(position) {
 
     if(gameOver){
+        console.log(gameOver)
         return;
     }
 
@@ -34,7 +36,7 @@ function handleMove(position) {
 
 function isWin(){
    
-    for(let i = 0; i<winStates.length; i++){
+    for(let i = 0; i < winStates.length; i++){
         let seq = winStates[i];
         let position1 = seq[0];
         let position2 = seq[1];
@@ -44,11 +46,32 @@ function isWin(){
             board[position1] == board[position3] &&
             board[position1] != '') {
                 return true;
+            
             }
+            console.log(winStates)
     }
     return false;
+   
+
+    
+}
+function reset(){
+       
+    if (gameOver == true){
+        board = ['','','','','','','','',''];
+        playerTime =  0;
+        gameOver = false;
+    }  
+    let squares = document.querySelectorAll(".square");
+    squares.forEach((square)=>{
+        square.innerHTML = "";
+    })
 }
 
+function resetGame(){
+    reset();
+    
+}
 
 
 console.log(botao)

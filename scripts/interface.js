@@ -27,17 +27,7 @@ function updateSquare(position){
     let symbols = board [position];
     square.innerHTML = `<div class='${symbols}'></div>`
 }
-
-function resetGame(){
-    
-    if (gameOver == true){
-        board = ['','','','','','','','',''];
-        playerTime = 0;
-        gameOver = false;
-    }
-    updateSquares(position);
-}
-function updateSquares(position){
+function updateSquares(){
     let squares = document.querySelectorAll('.square');
     squares.forEach((square)=> {
         let position = square.id;
@@ -47,3 +37,7 @@ function updateSquares(position){
         }
 })
 }
+
+
+
+
