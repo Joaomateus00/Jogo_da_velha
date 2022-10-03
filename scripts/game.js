@@ -68,10 +68,6 @@ function reset(){
     })
 }
 
-function resetGame(){
-    reset();
-    
-}
 
 
 console.log(botao)
