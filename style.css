@@ -24,8 +24,8 @@ h1{
 }
 .o:after{
     position: absolute;
-    content: "\1F6E1";
-    font-size: 50px;
+    content: "\274C";
+    font-size: 40px;
     line-height: 100px;
     top: 0%;
     bottom: 0%;
@@ -37,7 +37,7 @@ h1{
 }
 .x:after{
     position: absolute;
-    content: "\2694";
+    content: "\2B55";
     font-size: 50px;
     line-height: 100px;
     top: 0%;
